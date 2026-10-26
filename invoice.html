@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice INV-BC-2026-001 - BConnect P2P Escrow Platform (Grand Brain Connect Nigeria Ltd)</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 6mm 10mm 6mm 10mm;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #0f172a;
+            margin: 0;
+            padding: 12px 18px;
+            font-size: 11.5px;
+            line-height: 1.35;
+            background: #ffffff;
+        }
+
+        /* Non-printing Interactive Toolbar */
+        .no-print-bar {
+            background: #0b0f19;
+            color: #ffffff;
+            padding: 9px 18px;
+            margin: -12px -18px 12px -18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12.5px;
+            border-bottom: 2px solid #0fa86a;
+        }
+
+        .print-btn {
+            background: #0fa86a;
+            color: #ffffff;
+            border: none;
+            padding: 6px 15px;
+            font-weight: 700;
+            font-size: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            transition: background 0.15s ease;
+        }
+
+        .print-btn:hover {
+            background: #0c8554;
+        }
+
+        /* Header Branding */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2.5px solid #0c8554;
+            padding-bottom: 8px;
+        }
+
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 1px solid #d1fae5;
+            background: #f8fafc;
+        }
+
+        .brand-title {
+            font-size: 20px;
+            font-weight: 900;
+            color: #0c8554;
+            letter-spacing: 0.8px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .brand-tagline {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #0fa86a;
+            margin-top: 1px;
+            letter-spacing: 0.2px;
+        }
+
+        .reg-details {
+            font-size: 10.5px;
+            color: #334155;
+            margin-top: 2px;
+            line-height: 1.35;
+        }
+
+        .invoice-tag {
+            text-align: right;
+        }
+
+        .invoice-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: #0c8554;
+            letter-spacing: 1.5px;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .invoice-number {
+            margin: 3px 0 0 0;
+            font-size: 12px;
+            font-weight: 700;
+            color: #0fa86a;
+            letter-spacing: 0.5px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            margin-top: 3px;
+            padding: 2px 8px;
+            background: #e8f7f0;
+            color: #0c8554;
+            font-size: 9.5px;
+            font-weight: 800;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 1px solid #a7f3d0;
+        }
+
+        /* Two Column Client & Schedule Grid */
+        .grid-two {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 10px;
+            margin: 8px 0;
+            background: #f0fdf6;
+            padding: 8px 12px;
+            border-radius: 7px;
+            border-left: 4px solid #0fa86a;
+            border-top: 1px solid #d1fae5;
+            border-right: 1px solid #d1fae5;
+            border-bottom: 1px solid #d1fae5;
+        }
+
+        .grid-two h4 {
+            margin: 0 0 3px 0;
+            font-size: 10.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            color: #0c8554;
+            font-weight: 800;
+            border-bottom: 1px solid #a7f3d0;
+            padding-bottom: 2px;
+        }
+
+        .grid-two p {
+            margin: 1.5px 0;
+            font-size: 11px;
+            color: #1e293b;
+        }
+
+        .grid-two strong {
+            color: #0f172a;
+        }
+
+        /* Official Scope & Security Statement Box */
+        .coverage-statement-box {
+            background: #f0fdf6;
+            border: 1.5px solid #86efac;
+            border-radius: 6px;
+            padding: 7px 11px;
+            margin: 6px 0;
+            font-size: 11px;
+            color: #0c8554;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.35;
+        }
+
+        .coverage-statement-box svg {
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* Data Table */
+        table.data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+        }
+
+        table.data-table thead th {
+            background: #0c8554;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            padding: 5px 6px;
+            text-align: left;
+            border: none;
+        }
+
+        table.data-table td {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 4.5px 6px;
+            vertical-align: middle;
+            font-size: 11px;
+        }
+
+        table.data-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .item-number {
+            font-size: 11px;
+            font-weight: 800;
+            color: #0c8554;
+        }
+
+        .desc-title {
+            font-weight: 800;
+            font-size: 11.5px;
+            color: #0f172a;
+            letter-spacing: -0.1px;
+        }
+
+        .desc-sub {
+            font-size: 10.5px;
+            color: #334155;
+            margin-top: 1.5px;
+            line-height: 1.3;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .amount-col {
+            font-weight: 800;
+            font-size: 11.5px;
+            color: #0f172a;
+            white-space: nowrap;
+        }
+
+        .period-badge {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #1e293b;
+            font-size: 9.5px;
+            font-weight: 700;
+            padding: 1.5px 4.5px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .security-badge {
+            display: inline-block;
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+            font-size: 9.5px;
+            font-weight: 800;
+            padding: 1.5px 5px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        /* Bottom Section: Totals, Words, Payment */
+        .bottom-summary-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 10px;
+            margin-top: 6px;
+            align-items: start;
+        }
+
+        .in-words-box {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 5px 9px;
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        .in-words-box strong {
+            color: #0c8554;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 1px;
+        }
+
+        .in-words-box span {
+            font-weight: 700;
+            color: #0f172a;
+            font-style: italic;
+        }
+
+        .payment-box {
+            background: #f0fdf6;
+            border: 1.5px dashed #0fa86a;
+            border-radius: 6px;
+            padding: 6px 9px;
+            font-size: 11px;
+        }
+
+        .payment-box-title {
+            color: #0c8554;
+            font-weight: 800;
+            font-size: 10.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 3px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .bank-details-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2px 8px;
+            font-size: 11px;
+        }
+
+        .bank-label {
+            color: #475569;
+            font-weight: 600;
+        }
+
+        .bank-val {
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .account-num-highlight {
+            font-size: 12.5px;
+            font-weight: 900;
+            color: #0c8554;
+            letter-spacing: 0.8px;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .totals-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .totals-table td {
+            padding: 3.5px 7px;
+            font-size: 11px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .totals-table td:last-child {
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .grand-total {
+            background: #0c8554 !important;
+            color: #ffffff !important;
+            font-weight: 900 !important;
+            font-size: 13px !important;
+        }
+
+        .grand-total td {
+            color: #ffffff !important;
+            padding: 5px 7px !important;
+            border: none !important;
+        }
+
+        .milestone-highlight {
+            background: #f0fdf6;
+            font-weight: 700;
+            color: #0c8554;
+        }
+
+        /* Signatures Section */
+        .signatures-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            margin-top: 6px;
+            padding-top: 5px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .sig-block {
+            position: relative;
+        }
+
+        .sig-title {
+            font-size: 10px;
+            font-weight: 800;
+            color: #0c8554;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 2px;
+        }
+
+        .sig-img-container {
+            height: 35px;
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: -3px;
+        }
+
+        .sig-img {
+            max-height: 38px;
+            max-width: 130px;
+            object-fit: contain;
+            filter: contrast(1.1);
+        }
+
+        .sig-line {
+            border-bottom: 1.5px solid #334155;
+            height: 3px;
+            margin-bottom: 2px;
+        }
+
+        .sig-meta {
+            font-size: 10.5px;
+            color: #334155;
+            line-height: 1.3;
+        }
+
+        .sig-meta strong {
+            color: #0f172a;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            html,
+            body {
+                margin: 0 !important;
+                padding: 0 !important;
+                background: #ffffff !important;
+            }
+
+            .no-print-bar {
+                display: none !important;
+            }
+
+            @page {
+                size: A4 portrait;
+                margin: 5mm 8mm 5mm 8mm;
+            }
+
+            tr {
+                page-break-inside: avoid;
+            }
+
+            .bottom-summary-grid,
+            .signatures-section,
+            .coverage-statement-box {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Non-printing Interactive Toolbar for 1-Click PDF Generation -->
+    <div class="no-print-bar">
+        <div>
+            <strong>Emerald Codelines Official Project Billing</strong> &bull; BConnect P2P Escrow Platform &bull; Ready for A4 Print / PDF
+        </div>
+        <button class="print-btn" onclick="window.print()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            Print / Save as PDF (A4)
+        </button>
+    </div>
+
+    <!-- Official Header -->
+    <div class="header">
+        <div class="brand-section">
+            <img src="ecl.jpg" alt="Emerald Codelines" class="brand-logo" onerror="this.style.display='none'">
+            <div>
+                <h1 class="brand-title">EMERALD CODELINES</h1>
+                <div class="brand-tagline">Fintech Software Engineering &amp; Cybersecurity Architecture</div>
+                <div class="reg-details">
+                    <strong>BN:</strong> 8374060 &nbsp;|&nbsp; <strong>TIN:</strong> 33021703-0001<br>
+                    SUIT D301 GREY PLAZA DUNUKOFIA ST, AREA 11 GARKI, ABUJA, FCT<br>
+                    <strong>Email:</strong> emeraldcodelines@gmail.com &nbsp;|&nbsp; <strong>Phone:</strong> +234 (0) 808 504 0146
+                </div>
+            </div>
+        </div>
+        <div class="invoice-tag">
+            <h2 class="invoice-title">INVOICE</h2>
+            <div class="invoice-number"># INV-BC-2026-001</div>
+            <div class="status-badge">Phase 1 Mobilization Due</div>
+        </div>
+    </div>
+
+    <!-- Billed To & Schedule Card -->
+    <div class="grid-two">
+        <div>
+            <h4>Billed To (Client):</h4>
+            <p><strong>Grand Brain Connect Nigeria Limited (GBCONNET)</strong></p>
+            <p>Slogan: <em>Powered by GBCONNET</em></p>
+            <p><strong>Attn:</strong> Board of Directors &amp; Executive Project Sponsor</p>
+            <p><strong>Project:</strong> BConnect P2P Escrow Social Commerce Ecosystem &amp; Admin Panel</p>
+        </div>
+        <div>
+            <h4>Invoice &amp; Contract Terms:</h4>
+            <p><strong>Invoice Date:</strong> October 26, 2026</p>
+            <p><strong>Phase 1 Initial Mobilization (To Start &amp; Complete):</strong> &#8358;1,500,000.00 (Due Upon Contract Signoff)</p>
+            <p><strong>Phase 2 Completion Balance (Within 12 Months of Operation):</strong> &#8358;2,500,000.00</p>
+            <p><strong>Total Project Scope Sum:</strong> &#8358;4,000,000.00 (Inclusive of Hosting, Stores &amp; VAPT)</p>
+        </div>
+    </div>
+
+    <!-- Official Scope, Cybersecurity & Infrastructure Declaration Box -->
+    <div class="coverage-statement-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0fa86a" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+        </svg>
+        <span><strong>Fintech Architecture, Cyber Security &amp; Hosting Scope Guarantee:</strong> Total contract sum of <strong>&#8358;4,000,000.00</strong> covers complete cross-platform mobile engineering (Flutter for Android &amp; iOS), Web App, and Web Admin Panel. Specifically allocated within the funds is <strong>&#8358;700,000.00 dedicated to Fintech Cyber Security Testing, Vulnerability Assessment, Penetration Testing (VAPT), Anti-Fraud &amp; Failproofing</strong> with ongoing proactive research to safeguard financial escrow transactions. The fee also includes <strong>production cloud server hosting, database clusters, corporate domain, Google Play Store publishing, Apple App Store hosting</strong>, and 12 months technical fail-safe monitoring.</span>
+    </div>
+
+    <!-- Deliverables Table -->
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th style="width: 4%;" class="text-center">#</th>
+                <th style="width: 58%;">Deliverables &amp; Technical Scope of Engineering Work</th>
+                <th style="width: 18%;" class="text-center">Scope / Horizon</th>
+                <th style="width: 20%;" class="text-right">Amount (NGN)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center item-number">1.0</td>
+                <td>
+                    <div class="desc-title">BConnect Mobile Application Engineering (Flutter - Android &amp; iOS) &amp; WebApp</div>
+                    <div class="desc-sub">
+                        &bull; Buyer &amp; Seller onboarding with Phone/Email OTP verification &amp; initial role selector ("What do you want to do today?")<br>
+                        &bull; P2P Escrow Order Creation with +/- quantity, timeline (24h/48h/3d/7d), auto fee breakdown (&#8358;500 buyer / &#8358;500 seller)<br>
+                        &bull; Interactive 4-step escrow lifecycle (Buyer Paid [Funds Held], Waybill Dispatched, In Transit timer, Delivered)<br>
+                        &bull; Delivery code security handover system &amp; 2-hour post-delivery auto-release protection engine<br>
+                        &bull; Buyer Requests ("Wanted Board") marketplace &amp; Seller Adverts with category filtering<br>
+                        &bull; Seller Storefront trust center: deal count, 90% positive/10% negative trust stats, verified badges &amp; customer reviews<br>
+                        &bull; Customizable referral rewards engine with &#8358;500 bonus per completed order &amp; one-click WhatsApp link share
+                    </div>
+                </td>
+                <td class="text-center"><span class="period-badge">Mobile &amp; Web App</span></td>
+                <td class="text-right amount-col">&#8358;1,400,000.00</td>
+            </tr>
+            <tr>
+                <td class="text-center item-number">2.0</td>
+                <td>
+                    <div class="desc-title">Web-Based Admin Dashboard &amp; Live Escrow Arbitration Control Panel</div>
+                    <div class="desc-sub">
+                        &bull; Real-time transaction command center: monitor live, pending, locked, released, disputed &amp; completed escrow deals<br>
+                        &bull; User management console: user verification, suspension, freezing &amp; device hardware ID fingerprinting<br>
+                        &bull; Dispute Arbitration Center: decrypted chat logs, photo/video evidence inspection &amp; verdict actions (Refund Buyer / Pay Seller / Split)<br>
+                        &bull; Commission &amp; revenue manager: category commission percentages, flat escrow fees &amp; escrow bank balance auditor<br>
+                        &bull; Seller withdrawal approval system, broadcast push notification / email composer &amp; referral payout ledger
+                    </div>
+                </td>
+                <td class="text-center"><span class="period-badge">Admin Web Console</span></td>
+                <td class="text-right amount-col">&#8358;600,000.00</td>
+            </tr>
+            <tr>
+                <td class="text-center item-number">3.0</td>
+                <td>
+                    <div class="desc-title">Fintech Cyber Security Testing, VAPT, Proactive Research &amp; Anti-Fraud Failproofing</div>
+                    <div class="desc-sub">
+                        &bull; <strong>Fintech Security Testing &amp; Failproofing Allocation:</strong> Comprehensive Vulnerability Assessment &amp; Penetration Testing (VAPT)<br>
+                        &bull; Escrow trust vault fund isolation &amp; anti-tamper smart balance lock verification to prevent premature release or fund draining<br>
+                        &bull; Automated device anti-fraud: flagging duplicate accounts on same hardware device, VPN detection &amp; high-risk deals (&gt;&#8358;1,000,000)<br>
+                        &bull; Non-deletable, end-to-end encrypted chat architecture designed for evidentiary arbitration compliance<br>
+                        &bull; KYC Transaction Tier Security: Tier 1 (&#8358;500k), Tier 2 Online Verified (&#8358;5M), Tier 3 Unlimited (Physical Shop Verified)<br>
+                        &bull; Ongoing proactive cybersecurity research, penetration tests, and financial threat modeling as platform scales
+                    </div>
+                </td>
+                <td class="text-center"><span class="security-badge">Cybersecurity &amp; VAPT</span></td>
+                <td class="text-right amount-col">&#8358;700,000.00</td>
+            </tr>
+            <tr>
+                <td class="text-center item-number">4.0</td>
+                <td>
+                    <div class="desc-title">Enterprise Cloud Server Cluster, Supabase Backend &amp; Database Infrastructure (1 Year)</div>
+                    <div class="desc-sub">
+                        &bull; Dedicated secure cloud backend server environment with 99.95% uptime SLA guarantee<br>
+                        &bull; Enterprise Supabase PostgreSQL database cluster with transactional pooling, low-latency API response &amp; row-level security (RLS)<br>
+                        &bull; Realtime WebSocket event broadcast infrastructure for instant status changes, waybill alerts &amp; chat delivery<br>
+                        &bull; Encrypted cloud object storage for waybill receipts, unboxing videos, photos &amp; dispute proofs<br>
+                        &bull; Automated daily disaster-recovery database backups, continuous replication &amp; automated failover
+                    </div>
+                </td>
+                <td class="text-center"><span class="period-badge">12 Months (1 Year)</span></td>
+                <td class="text-right amount-col">&#8358;650,000.00</td>
+            </tr>
+            <tr>
+                <td class="text-center item-number">5.0</td>
+                <td>
+                    <div class="desc-title">Corporate Domain, Cloud Web Hosting, Google Play Store &amp; Apple App Store Hosting (1 Year)</div>
+                    <div class="desc-sub">
+                        &bull; Official corporate domain registration (e.g. bconnect.ng) with DNS management &amp; wildcard SSL/TLS encryption certificates<br>
+                        &bull; High-speed cloud web hosting for Public WebApp and Administrator Control Panel (12 Months)<br>
+                        &bull; Google Play Console publisher enrollment, Android production APK signing, policy compliance &amp; Play Store hosting<br>
+                        &bull; Apple Developer Program organization registration, iOS production IPA building, TestFlight distribution &amp; App Store hosting
+                    </div>
+                </td>
+                <td class="text-center"><span class="period-badge">Domain &amp; Stores (1 Year)</span></td>
+                <td class="text-right amount-col">&#8358;350,000.00</td>
+            </tr>
+            <tr>
+                <td class="text-center item-number">6.0</td>
+                <td>
+                    <div class="desc-title">12 Months Dedicated Operational Monitoring, App Store Maintenance &amp; Staff Training</div>
+                    <div class="desc-sub">
+                        &bull; 12 months continuous technical monitoring, server health surveillance &amp; rapid bug resolution at no additional cost<br>
+                        &bull; Handling of ongoing mobile OS upgrades (Android 15+ / iOS 18+) and App Store review / compliance updates<br>
+                        &bull; Administrative training session for GBCONNET operational and dispute mediation personnel<br>
+                        &bull; Educational video guidance for new users covering order creation to waybill release
+                    </div>
+                </td>
+                <td class="text-center"><span class="period-badge">12 Months Running</span></td>
+                <td class="text-right amount-col">&#8358;300,000.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Financial Breakdown, Words & Remittance Grid -->
+    <div class="bottom-summary-grid">
+        <div>
+            <div class="in-words-box">
+                <strong>Total Contract Amount in Words:</strong>
+                <span>Four Million Nigerian Naira Only (&#8358;4,000,000.00).</span>
+            </div>
+
+            <div class="payment-box">
+                <div class="payment-box-title">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0c8554" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                        <line x1="2" y1="10" x2="22" y2="10"></line>
+                    </svg>
+                    Direct Remittance Account Details:
+                </div>
+                <div class="bank-details-grid">
+                    <span class="bank-label">Bank:</span>
+                    <span class="bank-val">Moniepoint Microfinance Bank (MFB)</span>
+
+                    <span class="bank-label">Account Name:</span>
+                    <span class="bank-val">Emerald Codelines</span>
+
+                    <span class="bank-label">Account Number:</span>
+                    <span class="bank-val account-num-highlight">6384486305</span>
+
+                    <span class="bank-label">Reference:</span>
+                    <span class="bank-val">INV-BC-2026-001 / GBCONNET BConnect</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <table class="totals-table">
+                <tr>
+                    <td>Core Flutter Mobile &amp; WebApp (Item 1.0):</td>
+                    <td>&#8358;1,400,000.00</td>
+                </tr>
+                <tr>
+                    <td>Admin Dashboard &amp; Dispute Panel (Item 2.0):</td>
+                    <td>&#8358;600,000.00</td>
+                </tr>
+                <tr>
+                    <td>Cybersecurity Testing, VAPT &amp; Failproofing (Item 3.0):</td>
+                    <td style="color: #991b1b; font-weight: 800;">&#8358;700,000.00</td>
+                </tr>
+                <tr>
+                    <td>Cloud Server, Supabase &amp; DB Hosting (Item 4.0):</td>
+                    <td>&#8358;650,000.00</td>
+                </tr>
+                <tr>
+                    <td>Domain, PlayStore &amp; AppStore Hosting (Item 5.0):</td>
+                    <td>&#8358;350,000.00</td>
+                </tr>
+                <tr>
+                    <td>12-Month Support &amp; App Store Maintenance (Item 6.0):</td>
+                    <td>&#8358;300,000.00</td>
+                </tr>
+                <tr class="milestone-highlight">
+                    <td><strong>Phase 1: Mobilization (Start &amp; Complete):</strong></td>
+                    <td><strong>&#8358;1,500,000.00</strong></td>
+                </tr>
+                <tr class="milestone-highlight">
+                    <td><strong>Phase 2: Post-Launch (Within 12 Months):</strong></td>
+                    <td><strong>&#8358;2,500,000.00</strong></td>
+                </tr>
+                <tr class="grand-total">
+                    <td>TOTAL CONTRACT VALUE:</td>
+                    <td>&#8358;4,000,000.00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Official Signatures Section -->
+    <div class="signatures-section">
+        <div class="sig-block">
+            <div class="sig-title">Authorized Signatory (Emerald Codelines)</div>
+            <div class="sig-img-container">
+                <img src="my signature.png" alt="Signature - Joel Odufu" class="sig-img">
+            </div>
+            <div class="sig-line"></div>
+            <div class="sig-meta">
+                <strong>Joel Odufu</strong><br>
+                Lead Solutions Architect &amp; Engineering Director<br>
+                Date: October 26, 2026
+            </div>
+        </div>
+
+        <div class="sig-block">
+            <div class="sig-title">Client Acceptance (Grand Brain Connect Nigeria Ltd)</div>
+            <div class="sig-img-container">
+                <!-- Signature line placeholder for client signing -->
+            </div>
+            <div class="sig-line"></div>
+            <div class="sig-meta">
+                <strong>Authorized Management Signatory</strong><br>
+                Managing Director / Executive Board<br>
+                Date: ________________________
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
